@@ -116,9 +116,10 @@ var currentHour = currentMoment.hour();
 
 console.log( currentHour);
 
-//Change of background color per row based off time
+//Change of background color per row based off current time
 $(".user-notes").each(function(){
     var colorHour = $(this).attr("row-color");
+    
     if(colorHour < currentHour) {
     $(this).addClass("past");    
     }
