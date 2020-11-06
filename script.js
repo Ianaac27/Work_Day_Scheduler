@@ -107,8 +107,15 @@
 //     inputTextarea1.text(grabText1);
 // }
 
+
+//Current date and time
 var currentMoment = moment();
-var today = $("#currentDay").text(currentMoment.format("MMM Do, YYYY"));
+var date = $("#currentDay").text(currentMoment.format("MMM Do, YYYY"));
+var today = $("#today").text(currentMoment.format("dddd"));
 var currentHour = currentMoment.hour();
 
 console.log( currentHour);
+
+
+
+
