@@ -9,7 +9,7 @@
  var inputTextarea8 = $('#notes8')
  var inputTextarea9 = $('#notes9')
 
- //Save Button click to local storage
+ //Save Buttons, click function to local storage
   $('#button1').click(function(event) {
      event.preventDefault()
      localStorage.setItem('content1', inputTextarea1.val());
@@ -64,7 +64,7 @@
     inputTextarea9.text(inputTextarea9.val()); 
   })
 
-  //Display text on refresh
+  //Display text in text area when page refreshes
    window.onload = function() {
     var grabText1 = localStorage.getItem('content1', inputTextarea1.val());
     inputTextarea1.text(grabText1);
@@ -94,17 +94,19 @@
     inputTextarea9.text(grabText9);
 }
 
-//Current date and time
+//Display current date in header
 var currentMoment = moment();
 var date = $("#currentDay").text(currentMoment.format("MMM Do, YYYY"));
-var today = $("#today").text(currentMoment.format("dddd"));
-var currentHour = currentMoment.hour();
 
+//Display current day of the week
+var today = $("#today").text(currentMoment.format("dddd"));
+
+//Changes each row's background color based off current time
+var currentHour = currentMoment.hour();
 console.log( currentHour);
 
-//Change of background color per row based off current time
 $(".user-notes").each(function(){
-    var colorHour = $(this).attr("row-color");
+    var colorHour = $(this).attr("name"); //This will compare the attribute name of each text area which is set to a specific hour in military time
     
     if(colorHour < currentHour) {
     $(this).addClass("past");    
