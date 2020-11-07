@@ -1,112 +1,98 @@
- //Text Areas
- var inputTextarea1 = document.getElementById('notes1');
- var inputTextarea2 = document.getElementById('notes2');
- var inputTextarea3 = document.getElementById('notes3');
- var inputTextarea4 = document.getElementById('notes4');
- var inputTextarea5 = document.getElementById('notes5');
- var inputTextarea6 = document.getElementById('notes6');
- var inputTextarea7 = document.getElementById('notes7');
- var inputTextarea8 = document.getElementById('notes8');
- var inputTextarea9 = document.getElementById('notes9');
+//Text Areas
+ var inputTextarea1 = $('#notes1')
+ var inputTextarea2 = $('#notes2')
+ var inputTextarea3 = $('#notes3')
+ var inputTextarea4 = $('#notes4')
+ var inputTextarea5 = $('#notes5')
+ var inputTextarea6 = $('#notes6')
+ var inputTextarea7 = $('#notes7')
+ var inputTextarea8 = $('#notes8')
+ var inputTextarea9 = $('#notes9')
 
- //Save Buttons
- var saveButton1 = document.getElementById('button1');
- var saveButton2 = document.getElementById('button2');
- var saveButton3 = document.getElementById('button3');
- var saveButton4 = document.getElementById('button4');
- var saveButton5 = document.getElementById('button5');
- var saveButton6 = document.getElementById('button6');
- var saveButton7 = document.getElementById('button7');
- var saveButton8 = document.getElementById('button8');
- var saveButton9 = document.getElementById('button9');
-
- //Save Button functions to local storage
- saveButton1.addEventListener('click', function (event) {
+ //Save Button click to local storage
+  $('#button1').click(function(event) {
      event.preventDefault()
-     localStorage.setItem('content1', inputTextarea1.value);
-     inputTextarea1.textContent = inputTextarea1.value;
- })
+     localStorage.setItem('content1', inputTextarea1.val());
+     inputTextarea1.text(inputTextarea1.val()); 
+   })
 
- saveButton2.addEventListener('click', function (event) {
-     event.preventDefault()
-     localStorage.setItem('content2', inputTextarea2.value);
-     inputTextarea2.textContent = inputTextarea2.value;
- })
+   $('#button2').click(function(event) {
+    event.preventDefault()
+    localStorage.setItem('content2', inputTextarea2.val());
+    inputTextarea2.text(inputTextarea2.val()); 
+  })
 
- saveButton3.addEventListener('click', function (event) {
-     event.preventDefault()
-     localStorage.setItem('content3', inputTextarea3.value);
-     inputTextarea3.textContent = inputTextarea3.value;
- })
+  $('#button3').click(function(event) {
+    event.preventDefault()
+    localStorage.setItem('content3', inputTextarea3.val());
+    inputTextarea3.text(inputTextarea3.val()); 
+  })
 
- saveButton4.addEventListener('click', function (event) {
-     event.preventDefault()
-     localStorage.setItem('content4', inputTextarea4.value);
-     inputTextarea4.textContent = inputTextarea4.value;
- })
+  $('#button4').click(function(event) {
+    event.preventDefault()
+    localStorage.setItem('content4', inputTextarea4.val());
+    inputTextarea4.text(inputTextarea4.val()); 
+  })
 
- saveButton5.addEventListener('click', function (event) {
-     event.preventDefault()
-     localStorage.setItem('content5', inputTextarea5.value);
-     inputTextarea5.textContent = inputTextarea5.value;
- })
+  $('#button5').click(function(event) {
+    event.preventDefault()
+    localStorage.setItem('content5', inputTextarea5.val());
+    inputTextarea5.text(inputTextarea5.val()); 
+  })
 
- saveButton6.addEventListener('click', function (event) {
-     event.preventDefault()
-     localStorage.setItem('content6', inputTextarea6.value);
-     inputTextarea6.textContent = inputTextarea6.value;
- })
+  $('#button6').click(function(event) {
+    event.preventDefault()
+    localStorage.setItem('content6', inputTextarea6.val());
+    inputTextarea6.text(inputTextarea6.val()); 
+  })
 
- saveButton7.addEventListener('click', function (event) {
-     event.preventDefault()
-     localStorage.setItem('content7', inputTextarea7.value);
-     inputTextarea7.textContent = inputTextarea7.value;
- })
+  $('#button7').click(function(event) {
+    event.preventDefault()
+    localStorage.setItem('content7', inputTextarea7.val());
+    inputTextarea7.text(inputTextarea7.val()); 
+  })
 
- saveButton8.addEventListener('click', function (event) {
-     event.preventDefault()
-     localStorage.setItem('content8', inputTextarea8.value);
-     inputTextarea8.textContent = inputTextarea8.value;
- })
+  $('#button8').click(function(event) {
+    event.preventDefault()
+    localStorage.setItem('content8', inputTextarea8.val());
+    inputTextarea8.text(inputTextarea8.val()); 
+  })
 
- saveButton9.addEventListener('click', function (event) {
-     event.preventDefault()
-     localStorage.setItem('content9', inputTextarea9.value);
-     inputTextarea9.textContent = inputTextarea9.value;
- })
+  $('#button9').click(function(event) {
+    event.preventDefault()
+    localStorage.setItem('content9', inputTextarea9.val());
+    inputTextarea9.text(inputTextarea9.val()); 
+  })
 
- console.log(localStorage);
+  //Display text on refresh
+   window.onload = function() {
+    var grabText1 = localStorage.getItem('content1', inputTextarea1.val());
+    inputTextarea1.text(grabText1);
 
- //Display on refresh
- window.onload = function() {
-     inputTextarea1.textContent = localStorage.getItem('content1', inputTextarea1.value);
-     inputTextarea2.textContent = localStorage.getItem('content2', inputTextarea2.value);
-     inputTextarea3.textContent = localStorage.getItem('content3', inputTextarea3.value);
-     inputTextarea4.textContent = localStorage.getItem('content4', inputTextarea4.value);
-     inputTextarea5.textContent = localStorage.getItem('content5', inputTextarea5.value);
-     inputTextarea6.textContent = localStorage.getItem('content6', inputTextarea6.value);
-     inputTextarea7.textContent = localStorage.getItem('content7', inputTextarea7.value);
-     inputTextarea8.textContent = localStorage.getItem('content8', inputTextarea8.value);
-     inputTextarea9.textContent = localStorage.getItem('content9', inputTextarea9.value);
-  }
+    var grabText2 = localStorage.getItem('content2', inputTextarea2.val());
+    inputTextarea2.text(grabText2);
 
+    var grabText3 = localStorage.getItem('content3', inputTextarea3.val());
+    inputTextarea3.text(grabText3);
 
-//JQuery version?
+    var grabText4 = localStorage.getItem('content4', inputTextarea4.val());
+    inputTextarea4.text(grabText4);
 
-// var inputTextarea1 = $('notes1')
+    var grabText5 = localStorage.getItem('content5', inputTextarea5.val());
+    inputTextarea5.text(grabText5);
 
-//  $('.saveBtn').click(function(event) {
-//     event.preventDefault()
-//     localStorage.setItem('content', inputTextarea1.val());
-//     inputTextarea1.text(inputTextarea1.val()); 
-    
-//   })
+    var grabText6 = localStorage.getItem('content6', inputTextarea6.val());
+    inputTextarea6.text(grabText6);
 
-//   var grabText1 = localStorage.getItem('content', inputTextarea1.val());
-//   window.onload = function() {
-//     inputTextarea1.text(grabText1);
-// }
+    var grabText7 = localStorage.getItem('content7', inputTextarea7.val());
+    inputTextarea7.text(grabText7);
 
+    var grabText8 = localStorage.getItem('content8', inputTextarea8.val());
+    inputTextarea8.text(grabText8);
+
+    var grabText9 = localStorage.getItem('content9', inputTextarea9.val());
+    inputTextarea9.text(grabText9);
+}
 
 //Current date and time
 var currentMoment = moment();
