@@ -1,20 +1,20 @@
 .past {
-    background-color: #c0bfc4;
+    background-color: #e7e7e9;
     color: black;
   }
 
   .present {
-    background-color: #95df95;
+    background-color: #b2e0b2;
     color: white;
   }
 
   .future {
-    background-color: #7cace2;
+    background-color: #aec7e4;
     color: white;
   }
 
   button {
-      background-color: #576b7e;
+      background-color: #6e879e;
       color: black;
   }
 
