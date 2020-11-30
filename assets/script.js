@@ -9,6 +9,7 @@
  var inputTextarea8 = $('#notes8')
  var inputTextarea9 = $('#notes9')
 
+ console.log(inputTextarea1);
  //Save Buttons, click function to local storage
   $('#button1').click(function(event) {
      event.preventDefault()

@@ -1,23 +1,23 @@
 .past {
-    background-color: #e7e7e9;
+  background-color: #e7e7e9;
+  color: rgb(54, 54, 54);
+}
+
+.present {
+  background-color: #b2e0b2;
+  color: rgb(54, 54, 54);
+}
+
+.future {
+  background-color: #aec7e4;
+  color: rgb(54, 54, 54);
+}
+
+button {
+    background-color: #6e879e;
     color: black;
-  }
+}
 
-  .present {
-    background-color: #b2e0b2;
-    color: white;
-  }
-
-  .future {
-    background-color: #aec7e4;
-    color: white;
-  }
-
-  button {
-      background-color: #6e879e;
-      color: black;
-  }
-
-  button:hover {
-      opacity: .5;
-  }
+button:hover {
+    opacity: .5;
+}
